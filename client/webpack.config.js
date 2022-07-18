@@ -24,7 +24,6 @@ module.exports = () => {
         template: './index.html',
         title: 'Contact Cards'
       }),
-
       // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
