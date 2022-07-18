@@ -22,8 +22,9 @@ module.exports = () => {
 
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Contact Cards'
+        title: 'Text Editor'
       }),
+      
       // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -32,11 +33,9 @@ module.exports = () => {
 
       // Creates a manifest.json file.
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'Contact Cards',
-        short_name: 'Contact',
-        description: 'Never forget your contacts!',
+        name: 'Text Editor',
+
+        description: 'A text editor (start typing!)',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
@@ -53,8 +52,6 @@ module.exports = () => {
 
     module: {
       rules: [
-        //UPDATE TO FIT THIS PROJECT
-
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
